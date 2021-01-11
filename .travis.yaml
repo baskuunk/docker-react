@@ -1,5 +1,6 @@
 sudo: required
 language: generic
+
 services:
   - docker
 
@@ -10,7 +11,7 @@ script:
   - docker run -e CI=true kasbuunk/docker-react npm run test 
 
 deploy: 
-  prover: elasticbeanstalk
+  provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-react"
   env: "DockerReact-env-1"
